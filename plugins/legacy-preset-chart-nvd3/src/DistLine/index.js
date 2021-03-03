@@ -19,25 +19,17 @@
 import { t, ChartMetadata, ChartPlugin } from '@superset-ui/core';
 import transformProps from '../transformProps';
 import thumbnail from './images/thumbnail.png';
-import { ANNOTATION_TYPES } from '../vendor/superset/AnnotationTypes';
 import controlPanel from './controlPanel';
 
 const metadata = new ChartMetadata({
-  canBeAnnotationTypes: [ANNOTATION_TYPES.TIME_SERIES],
   credits: ['http://nvd3.org'],
-  description: 'A line chart where the x axis is time',
-  name: t('Time-series Line Chart'),
-  supportedAnnotationTypes: [
-    ANNOTATION_TYPES.TIME_SERIES,
-    ANNOTATION_TYPES.INTERVAL,
-    ANNOTATION_TYPES.EVENT,
-    ANNOTATION_TYPES.FORMULA,
-  ],
+  description: t('A line chart where the x axis is anything'),
+  name: t('Line Chart'),
   thumbnail,
   useLegacyApi: true,
 });
 
-export default class LineChartPlugin extends ChartPlugin {
+export default class DistBarChartPlugin extends ChartPlugin {
   constructor() {
     super({
       loadChart: () => import('../ReactNVD3'),

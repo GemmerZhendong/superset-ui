@@ -24,6 +24,7 @@ import BubbleChartPlugin from './Bubble';
 import BulletChartPlugin from './Bullet';
 import CompareChartPlugin from './Compare';
 import DistBarChartPlugin from './DistBar';
+import DistLineChartPlugin from './DistLine';
 import DualLineChartPlugin from './DualLine';
 import LineChartPlugin from './Line';
 import LineMultiChartPlugin from './LineMulti';
@@ -42,6 +43,7 @@ export default class NVD3ChartPreset extends Preset {
         new BulletChartPlugin().configure({ key: 'bullet' }),
         new CompareChartPlugin().configure({ key: 'compare' }),
         new DistBarChartPlugin().configure({ key: 'dist_bar' }),
+        new DistLineChartPlugin().configure({ key: 'dist_line' }),
         new DualLineChartPlugin().configure({ key: 'dual_line' }),
         new LineChartPlugin().configure({ key: 'line' }),
         new LineMultiChartPlugin().configure({ key: 'line_multi' }),

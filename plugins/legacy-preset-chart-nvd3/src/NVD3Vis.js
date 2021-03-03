@@ -132,7 +132,7 @@ const propTypes = {
       PropTypes.oneOfType([
         // pie
         categoryAndValueXYType,
-        // dist-bar
+        // dist-line, dist-bar
         PropTypes.shape({
           key: PropTypes.string,
           values: PropTypes.arrayOf(categoryAndValueXYType),
@@ -187,6 +187,7 @@ const propTypes = {
     'compare',
     'column',
     'dist_bar',
+    'dist_line',
     'line',
     'line_multi',
     'time_pivot',
@@ -355,6 +356,7 @@ function nvd3Vis(element, props) {
 
     switch (vizType) {
       case 'line':
+      case 'dist_line':
         if (canShowBrush) {
           chart = nv.models.lineWithFocusChart();
           if (staggerLabels) {

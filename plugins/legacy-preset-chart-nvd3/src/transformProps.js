@@ -110,7 +110,7 @@ export default function transformProps(chartProps) {
   } else if (vizType === 'dual_line') {
     yAxisFormat = yAxisFormat || grabD3Format(datasource, metric);
     yAxis2Format = yAxis2Format || grabD3Format(datasource, metric2);
-  } else if (['line', 'dist_bar', 'bar', 'area'].includes(chartProps.formData.vizType)) {
+  } else if (['dist_line', 'line', 'dist_bar', 'bar', 'area'].includes(chartProps.formData.vizType)) {
     yAxisFormat =
       yAxisFormat || grabD3Format(datasource, metrics.length > 0 ? metrics[0] : undefined);
   } else if (vizType === 'bullet') {
